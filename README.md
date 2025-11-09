@@ -1,86 +1,21 @@
-#include <iostream>
-#include <cmath>
-using namespace std;
+# Simple Calculator (C++)
 
-void showMenu() {
+A menu-driven C++ calculator that performs basic arithmetic operations including addition, subtraction, multiplication, division, power, and modulus. Includes error handling for division and modulus by zero.
 
-    cout << "Welcome to the Simple Calculator" << endl;
-    cout << "1. Addition (+)" << endl;
-    cout << "2. Subtraction (-)" << endl;
-    cout << "3. Multiplication (*)" << endl;
-    cout << "4. Division (/)" << endl;
-    cout << "5. Power Rule (^)" << endl;
-    cout << "6. Modulus (%)" << endl;
-    cout << "7. Exit" << endl;
-    cout << "Choose an option (1-7)" << endl;
-}
+## Features
+- Interactive menu for operation selection
+- Supports addition, subtraction, multiplication, division, power, and modulus
+- Handles division/modulus by zero errors
+- Uses loops and switch-case control structures
 
-int main() {
-    int choice;
-    double result;
-    double num1, num2;
+## Technical Skills Demonstrated
+- C++ programming
+- Switch-case statements and while loops
+- Error handling
+- Math functions (`cmath`)
+- Console input/output
 
-
-    while (true) { 
-
-        showMenu();
-        cin >> choice;
-        if (choice == 7) {
-            cout << "Goodbye!" << endl;
-            break;
-        }
-        
-        cout << "Please enter your first number" << endl;
-        cin >> num1;
-        cout << "Please enter your second number" << endl;
-        cin >> num2;
-
-        switch(choice) {
-            case 1: {
-                result = num1 + num2;
-                cout << "Result : " << result << endl;
-                break;
-            }
-            case 2 : {
-                result = num1 - num2;
-                cout << "Result : " << result << endl;
-                break;
-            }
-            case 3 : {
-                result = num1 * num2;
-                cout << "Result : " << result << endl;
-                break;
-            }
-            case 4 : {
-                if (num2 == 0) {
-                    cout << "Undefined" << endl;
-                    break;
-                }
-                else {
-                result = num1 / num2;
-                cout << "Result : " << result << endl;
-                break;
-                }
-            }
-            case 5 : {
-                result = pow(num1, num2);
-                cout << "Result : " << result << endl;
-                break;
-            }
-            case 6 : {
-                if (num2 == 0) {
-                    cout << "Error! Can't perform modulus by 0 " << endl;
-                }
-                else {
-                    result = fmod(num1, num2);
-                    cout << "Result : " << result << endl;
-                }
-                break;
-            }
-            default :
-            cout << "Invalid Option!" << endl;
-            break;
-        }
-    }
-    return 0;
-}
+## How to Run
+1. Compile the code using a C++ compiler:
+   ```bash
+   g++ main.cpp -o calculator
